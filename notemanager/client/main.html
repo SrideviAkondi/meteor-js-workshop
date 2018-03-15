@@ -1,0 +1,103 @@
+<head>
+
+  <title>Note Manager</title>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+</head>
+
+<body> 
+  
+  <nav class="red">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Note Manager</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-dowm">
+          <!-- {{#if currentUser}} -->
+          <li class="nav-item">
+              <a id="button1" class="waves-effect waves-light btn modal-trigger" href="#addModal">Add Note</a>
+            </li>
+          <!-- {{/if}} -->
+            <li class="nav-item">
+              {{> loginButtons}}
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <!--Import jQuery before materialize.js-->
+      <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script> -->
+
+<!--  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Note Manager</a>
+    </div>
+    </div>
+  </nav>
+ -->  <div class="container">
+  <h1>Latest Notes</h1>
+  {{#if currentUser}}
+    <ul class="collection">
+    {{#each notes}}
+    {{> note}} 
+    {{/each}} 
+  </ul>
+{{else}}
+<p>Please log in to manage notes</p>
+{{/if}}
+</div>
+
+
+{{> add}}
+<script>
+$('#button1').on('click', function() {
+    $('.modal').show();
+});
+
+/*var modal = document.getElementById('button2');
+$('.modal-content').onclick = function() {
+    modal.style.display = "none";
+}*/
+
+$('#button2').on('click', function() {
+    $('.modal').hide();
+});
+
+   /* $(document).ready(function(){
+      $('.modal').leanModal();
+    });*/
+  </script>
+</body>
+
+<template name="note">
+  <li class="collection-items">
+  {{text}}:<strong> Added by {{username}}</strong>
+  <a href="#!" class="delete-note secondary-content"><!-- <i class="material-icons">remove circle outline</i> --><i class="material-icons">close</i></a></li>
+
+</template>
+
+<template name="add">
+<!-- Modal Structure -->
+
+  <div id="#addModal" class="modal">
+    <div class="modal-content">
+      <h3>Add a Note</h3>
+      <form class="add-form">
+        <input type="text" name="text" placeholder="Add a couple of lines of text....">
+        <input id="button2"  type="submit" value="Submit">
+       <!--  <div class="modal-footer">
+      <a href="#!" id="button2" class="modal-action modal-close waves-effect waves-green btn-flat">Submit</a>
+    </div> -->
+  </form>
+    </div>
+  </div>  
+</template>

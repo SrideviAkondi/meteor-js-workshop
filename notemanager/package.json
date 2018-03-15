@@ -1,0 +1,12 @@
+{
+  "name": "notemanager",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.40",
+    "materialize-css": "^0.97.6",
+    "meteor-node-stubs": "^0.3.2"
+  }
+}

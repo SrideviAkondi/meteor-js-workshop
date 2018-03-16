@@ -62,13 +62,17 @@ or first clone the existing repository by using the command
 
 Download all the required dependencies using the command
 
-npm install
+#### npm install
 
-Run the application and start mongo server using 
+Start mongo server using 
+
+#### meteor mongo 
+
+Run the application in another command prompt window using 
 
 #### meteor 
 
-#### meteor mongo 
+
 
 
 

@@ -62,6 +62,18 @@ or first clone the existing repository by using the command
 #### git fetch origin Final
 #### git checkout Final
 
+Download all the required dependencies using the command
+
+npm install
+
+Run the application and start mongo server using 
+
+#### meteor 
+
+#### meteror mongo 
+
+
+
 
 
 

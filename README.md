@@ -28,12 +28,10 @@ Note: Please make sure you download the LTS version.
 ##### Installing on Windows
 
 First Install Chocolatey
-        	Install with cmd.exe and Run the following command:
+Install with cmd.exe and Run the following command and later run this command using an Administrator command prompt:
  
 #### @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
- 
-          Run this command using an Administrator command prompt:
- 
+
 #### choco install meteor
  
  ##### Installing on Mac
@@ -59,8 +57,8 @@ Install a frontend framework such as Materialize. Move to the project directory 
 or first clone the existing repository by using the command
 
 #### git clone https://github.com/SrideviAkondi/meteor-js-workshop
-#### git fetch origin Final
-#### git checkout Final
+#### git fetch origin master
+#### git checkout master
 
 Download all the required dependencies using the command
 
@@ -70,7 +68,7 @@ Run the application and start mongo server using
 
 #### meteor 
 
-#### meteror mongo 
+#### meteor mongo 
 
 
 
